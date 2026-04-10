@@ -737,11 +737,12 @@
   <section class="letter-section">
     <div class="letter reveal">
       <div class="greeting">Hey beautiful 😊,</div>
-      <p>I know we haven't know each other for that long, but I just wanted to say I'm really glad that we met.</p>
-      <p>There is somthing about talking to you that feels easy and nice, and I genuinely enjoy it.</p>
-      <p>On your birthday, I just hope you feel as happy and appreciated as you deserve 🎂</p>
-      <p>And I'm looking forward to getting to know you more.</p>
-      <p>Have a beautiful day✨</p>
+      <p>I know we haven’t known each other for that long it’s only been a few weeks but I’m really glad we met.</p>
+      <p>I’ve genuinely enjoyed the time we’ve spent together, whether it was our rides or just chilling and talking. You have a nice vibe, and I like being around you.</p>
+      <p>I don’t know if things feel the same on your side yet, and that’s completely okay I just wanted to be honest about how I feel.</p>
+      <p>On your birthday, I just hope you’re happy, relaxed, and enjoying your day the way you want 🎂</p>
+      <p>And yeah… I’d still like to get to know you more, at your pace.</p>
+      <p>Have a beautiful day just like you✨</p>
       <div class="signature">-Siddhant</div>
     </div>
   </section>
@@ -927,15 +928,18 @@
     });
 
     // ===== MUSIC (placeholder — replace src with a real audio URL) =====
-    // const audio = new Audio('YOUR_MUSIC_URL_HERE.mp3');
-    // audio.loop = true;
-    const musicBtn = document.getElementById('musicBtn');
-    let isPlaying = false;
-    musicBtn.addEventListener('click', () => {
-      isPlaying = !isPlaying;
-      musicBtn.classList.toggle('playing', isPlaying);
-      // if (isPlaying) audio.play(); else audio.pause();
-    });
+  const audio = new Audio('dandelions.mp3');
+audio.loop = true;
+audio.volume = 0.5;
+
+let started = false;
+
+document.addEventListener('click', () => {
+  if (!started) {
+    audio.play();
+    started = true;
+  }
+}, { once: true });
   </script>
 
 </body>
